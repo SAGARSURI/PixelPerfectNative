@@ -11,5 +11,6 @@ A native android app which displays list of images based on search query from Un
 4. Coroutines
 5. Coroutines-Flow
 6. Retrofit 2
-7. Ktlint
-8. Android Jetpack
+7. Glide
+8. Ktlint
+9. Android Jetpack
