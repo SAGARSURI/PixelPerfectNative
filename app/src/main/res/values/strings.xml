@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PixelPerfectNative</string>
+  <string name="text_search">Search</string>
+    <string name="title_share_image">Share via:</string>
+    <string name="title_dark_mode">Dark Mode</string>
+</resources>
