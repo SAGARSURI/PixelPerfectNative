@@ -10,6 +10,6 @@ interface UnsplashService {
     suspend fun getImagesBySearch(
         @Query("page") page: Int = 1,
         @Query("query") query: String,
-        @Query("client_id") apiKey: String = "f479ec080c34ba3fa66a8976117b5a99b030528ae1a0be2df5f8de83525bfbfe"
+        @Query("client_id") apiKey: String = "api-key"
     ): PhotoEntity
 }
