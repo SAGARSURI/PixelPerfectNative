@@ -3,7 +3,7 @@ A native android app which displays list of images based on search query from Un
 
 ## Getting Started
 
-Clone the project and import in Android Studio or Visual Code to run. Make sure you get your API key from [here](https://unsplash.com/developers) and add it to the project.
+Clone the project and import in Android Studio to run. Make sure you get your API key from [here](https://unsplash.com/developers) and add it to the project.
 
 ## Screenshots
 
