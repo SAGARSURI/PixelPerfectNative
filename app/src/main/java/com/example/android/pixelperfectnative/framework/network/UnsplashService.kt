@@ -1,6 +1,5 @@
 package com.example.android.pixelperfectnative.framework.network
 
-import com.example.android.pixelperfectnative.framework.PhotoEntity
 import retrofit2.http.GET
 import retrofit2.http.Query
 

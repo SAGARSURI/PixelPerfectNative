@@ -1,4 +1,4 @@
-package com.example.android.pixelperfectnative.framework
+package com.example.android.pixelperfectnative.framework.network
 import com.squareup.moshi.Json
 
 

@@ -1,14 +1,15 @@
 package com.example.android.pixelperfectnative.presentation.ui
 
 import androidx.lifecycle.*
-import com.example.android.core.domain.Photo
 import com.example.android.core.utils.ViewState
 import com.example.android.pixelperfectnative.framework.Interactor
+import com.example.android.pixelperfectnative.framework.data.Photo
 import com.example.android.pixelperfectnative.framework.utils.DispatcherProvider
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -48,7 +49,17 @@ class PhotosViewModel @Inject constructor(
         interactor: Interactor,
         searchText: String
     ): Flow<ViewState<List<Photo>>> {
-        return interactor.getSearchResult(searchText)
+        return interactor.getSearchResult(searchText).map { state ->
+            state.isSuccess {
+                it.map { photo ->
+                    Photo(
+                        photoUrl = photo.photoUrl,
+                        authorName = photo.authorName,
+                        profileUrl = photo.profileUrl
+                    )
+                }
+            }
+        }
     }
 
     private fun updatePhotoLiveData(result: Flow<ViewState<List<Photo>>>) {

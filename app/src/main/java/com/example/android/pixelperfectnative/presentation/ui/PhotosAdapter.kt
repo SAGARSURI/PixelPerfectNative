@@ -3,8 +3,8 @@ package com.example.android.pixelperfectnative.presentation.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.core.domain.Photo
 import com.example.android.pixelperfectnative.databinding.PhotoItemBinding
+import com.example.android.pixelperfectnative.framework.data.Photo
 import com.example.android.pixelperfectnative.presentation.utils.load
 
 class PhotosAdapter(private val photosList: MutableList<Photo> = mutableListOf()) :
